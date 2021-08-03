@@ -6,8 +6,9 @@ import { Backlink } from "@saleor/macaw-ui";
 import React, { useContext } from "react";
 import { useIntl } from "react-intl";
 
-import { giftCardsListTableMessages as tableMessages } from "../GiftCardsList/messages";
-import { GiftCardDetailsContext } from "./providers/GiftCardDetailsProvider";
+import { giftCardsListTableMessages as tableMessages } from "../../GiftCardsList/messages";
+import { GiftCardDetailsContext } from "../providers/GiftCardDetailsProvider";
+import GiftCardEnableDisableSection from "./GiftCardEnableDisableSection";
 
 interface GiftCardUpdatePageHeaderProps {
   onBack: () => void;
@@ -49,7 +50,9 @@ const GiftCardUpdatePageHeader: React.FC<GiftCardUpdatePageHeaderProps> = ({
             />
           )
         }
-      />
+      >
+        <GiftCardEnableDisableSection />
+      </PageHeader>
     </>
   );
 };
